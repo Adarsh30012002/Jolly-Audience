@@ -33,11 +33,11 @@ Before running the application, ensure you have the following installed:
 ### Installation
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/jolly-audience.git
+   git clone https://github.com/abhi-s-03/SHN-OpenCV
    ```
 2. Navigate to the project directory:
    ```bash
-   cd jolly-audience
+   cd SHN-OpenCV
    ```
 3. Install the required Python dependencies:
    ```bash
