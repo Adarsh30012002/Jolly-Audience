@@ -20,16 +20,15 @@ This project extracts happy moments from event videos, providing a collection of
 4. **Easy-to-Use Web Interface:** The web interface allows you to upload event videos effortlessly and receive a collection of curated happy frames.
 
 ## Libraries used
-- **Flask:** Backend web framework for Python - Version X.X
-- **React:** Frontend JavaScript library for building user interfaces - Version X.X
-- **OpenCV:** Computer vision library for facial detection - Version X.X
-- **concurrent.futures:** Library for parallelizing tasks in Python - Version X.X
-- **axios:** HTTP client for making requests in React applications - Version X.X
+- **Flask:** Backend web framework for Python - Version 3.0.0
+- **React:** Frontend JavaScript library for building user interfaces - Version 18.2.0
+- **OpenCV:** Computer vision library for facial detection - Version 4.8.1.78
+- **concurrent.futures:** Library for parallelizing tasks in Python 
 
 ## How to configure
 ### Prerequisites
 Before running the application, ensure you have the following installed:
-- Python 3.x
+- Python 3.10.6
 - pip (Python package installer)
 
 ### Installation
