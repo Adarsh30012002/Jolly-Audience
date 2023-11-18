@@ -5,8 +5,10 @@
 This project extracts happy moments from event videos, providing a collection of post-event photos featuring smiling faces. It utilizes facial recognition and similarity checks to curate images that capture the joyous expressions of the audience.
 
 ## Team members
-1. [Name 1](https://github.com/your-username)
-2. [Name 2](https://github.com/your-username)
+1. Aaron Jacob [https://github.com/aaron-jacob]
+2. Abhishek S [https://github.com/abhi-s-03]
+3. Mathew V Kariath [https://github.com/MVK2803]
+4. Rajath Thomas Kurian [https://github.com/rajath-tk]
 
 ## Link to product walkthrough
 [Link to video](Link Here)
