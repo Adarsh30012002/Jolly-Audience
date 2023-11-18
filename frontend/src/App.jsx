@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [videoFile, setVideoFile] = useState(null);
@@ -14,28 +14,33 @@ function App() {
 
   const handleUpload = async () => {
     const formData = new FormData();
-    formData.append('video', videoFile);
+    formData.append("video", videoFile);
 
     try {
       setLoading(true);
 
-      const response = await fetch('http://localhost:5000/extract_happy_frames', {
-        method: 'POST',
-        body: formData,
-        onUploadProgress: (progressEvent) => {
-          const progress = Math.round((progressEvent.loaded / progressEvent.total) * 100);
-          setUploadProgress(progress);
-        },
-      });
+      const response = await fetch(
+        "http://localhost:5000/extract_happy_frames",
+        {
+          method: "POST",
+          body: formData,
+          onUploadProgress: (progressEvent) => {
+            const progress = Math.round(
+              (progressEvent.loaded / progressEvent.total) * 100
+            );
+            setUploadProgress(progress);
+          },
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();
         setHappyFrames(result.happy_frames);
       } else {
-        console.error('Error processing video:', response.statusText);
+        console.error("Error processing video:", response.statusText);
       }
     } catch (error) {
-      console.error('Network error during video upload:', error);
+      console.error("Network error during video upload:", error);
     } finally {
       setLoading(false);
       setUploadProgress(0);
@@ -79,8 +84,15 @@ function App() {
           <h2>Happy Faces:</h2>
           <div className="image-container">
             {happyFrames.map((frame, index) => (
-              <div key={index} className="image-card" onClick={() => handleImageClick(index)}>
-                <img src={`data:image/jpeg;base64,${frame}`} alt={`Happy Face ${index}`} />
+              <div
+                key={index}
+                className="image-card"
+                onClick={() => handleImageClick(index)}
+              >
+                <img
+                  src={`data:image/jpeg;base64,${frame}`}
+                  alt={`Happy Face ${index}`}
+                />
               </div>
             ))}
           </div>
@@ -90,8 +102,13 @@ function App() {
       {selectedImage && (
         <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={handleCloseModal}>&times;</span>
-            <img src={`data:image/jpeg;base64,${selectedImage}`} alt="Selected Image" />
+            <span className="close" onClick={handleCloseModal}>
+              &times;
+            </span>
+            <img
+              src={`data:image/jpeg;base64,${selectedImage}`}
+              alt="Selected Image"
+            />
           </div>
         </div>
       )}
