@@ -2,7 +2,25 @@
 
 # Jolly Audience - Post-Event Photo Generator
 
-This project extracts happy moments from event videos, providing a collection of post-event photos featuring smiling faces. It utilizes facial recognition and similarity checks to curate images that capture the joyous expressions of the audience.
+Capturing the essence of joyous moments is at the heart of every event. Jolly Audience, an innovative post-event photo generator, goes beyond traditional event photography to curate a vibrant collection of smiles and laughter. Imagine reliving the happiest moments from your event through a personalized gallery, showcasing the genuine expressions of your audience. 
+
+## Transforming Events into Timeless Memories
+
+Jolly Audience is not just a photo generator; it's a storyteller that encapsulates the spirit of your event. It employs advanced facial recognition technology and intelligent similarity checks to craft a unique narrative through carefully selected frames. The result? A gallery that radiates joy, inclusivity, and the unforgettable atmosphere of your event.
+
+## Features that Set Us Apart
+
+### 1. Happy Face Detection
+Utilizing cutting-edge Haar Cascade classifiers, Jolly Audience identifies not just faces but the radiant smiles that light up each frame of your event video.
+
+### 2. Smart Similarity Check
+Say goodbye to repetitive images. Jolly Audience performs a sophisticated similarity check between frames, ensuring that each photo in your collection is distinct and contributes to a diverse visual story.
+
+### 3. Multiple Happy Faces
+We believe in inclusivity. Jolly Audience extracts frames featuring a minimum number of happy faces, guaranteeing that every moment is a shared moment.
+
+### 4. Effortless Web Interface
+Uploading event videos has never been easier. Jolly Audience provides a user-friendly web interface, allowing you to effortlessly upload videos and receive a meticulously curated collection of happy frames.
 
 ## Team members
 1. Aaron Jacob [https://github.com/aaron-jacob]
@@ -59,3 +77,5 @@ Before running the application, ensure you have the following installed:
    ```
    This will start the React development server at http://localhost:3000.
 3. Open your web browser and go to http://localhost:3000 to access the application.
+
+--- 
