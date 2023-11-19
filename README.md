@@ -13,13 +13,10 @@ Jolly Audience is not just a photo generator; it's a storyteller that encapsulat
 ### 1. Happy Face Detection
 Utilizing cutting-edge Haar Cascade classifiers, Jolly Audience identifies not just faces but the radiant smiles that light up each frame of your event video.
 
-### 2. Smart Similarity Check
-Say goodbye to repetitive images. Jolly Audience performs a sophisticated similarity check between frames, ensuring that each photo in your collection is distinct and contributes to a diverse visual story.
-
-### 3. Multiple Happy Faces
+### 2. Multiple Happy Faces
 We believe in inclusivity. Jolly Audience extracts frames featuring a minimum number of happy faces, guaranteeing that every moment is a shared moment.
 
-### 4. Effortless Web Interface
+### 3. Effortless Web Interface
 Uploading event videos has never been easier. Jolly Audience provides a user-friendly web interface, allowing you to effortlessly upload videos and receive a meticulously curated collection of happy frames.
 
 ## Team members
