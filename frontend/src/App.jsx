@@ -1,4 +1,7 @@
 import { useState } from "react";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+
 import "./App.css";
 
 function App() {
@@ -7,6 +10,7 @@ function App() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [loading, setLoading] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImages, setSelectedImages] = useState([]);
 
   const handleFileChange = (event) => {
     setVideoFile(event.target.files[0]);
@@ -47,6 +51,33 @@ function App() {
     }
   };
 
+  const handleImageSelection = (index) => {
+    const isSelected = selectedImages.includes(index);
+    if (isSelected) {
+      setSelectedImages(selectedImages.filter((i) => i !== index));
+    } else {
+      setSelectedImages([...selectedImages, index]);
+    }
+  };
+
+  const handleImageDownload = () => {
+    if (selectedImages.length > 0) {
+      const zip = new JSZip();
+      const folder = zip.folder("happy_images"); // Create a folder for all images
+
+      selectedImages.forEach((index, i) => {
+        const image = happyFrames[index];
+        folder.file(`happy_image_${i}_${new Date().getTime()}.jpeg`, image, {
+          base64: true,
+        });
+      });
+
+      zip.generateAsync({ type: "blob" }).then((content) => {
+        saveAs(content, "happy_images.zip");
+      });
+    }
+  };
+
   const handleImageClick = (index) => {
     setSelectedImage(happyFrames[index]);
   };
@@ -80,21 +111,26 @@ function App() {
       )}
 
       {happyFrames.length > 0 && (
-        <div>
+        <div className="happyframes">
           <h2>Happy Faces:</h2>
           <div className="image-container">
             {happyFrames.map((frame, index) => (
-              <div
-                key={index}
-                className="image-card"
-                onClick={() => handleImageClick(index)}
-              >
+              <div key={index} className="image-card">
+                <input
+                  type="checkbox"
+                  checked={selectedImages.includes(index)}
+                  onChange={() => handleImageSelection(index)}
+                />
                 <img
                   src={`data:image/jpeg;base64,${frame}`}
                   alt={`Happy Face ${index}`}
+                  onClick={() => handleImageClick(index)}
                 />
               </div>
             ))}
+          </div>
+          <div>
+            <button onClick={handleImageDownload}>Download Images</button>
           </div>
         </div>
       )}

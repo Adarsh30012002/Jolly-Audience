@@ -36,6 +36,7 @@ input {
   border-radius: 15px;
   border: none;
   outline: none;
+  margin-left: 70px;
 }
 
 button {
@@ -47,6 +48,7 @@ button {
   border: none;
   border-radius: 10px;
   outline: none;
+  margin-top: 20px;
 }
 
 
@@ -69,7 +71,6 @@ progress {
   transition: transform 0.2s ease-in-out;
   max-width: 25rem;
   flex: 1 0 calc(20% - 10px);
-  /* Initially, 5 cards in a row */
 }
 
 .image-card:hover {
@@ -84,43 +85,33 @@ progress {
 @media screen and (max-width: 1200px) {
   .image-card {
     flex: 1 0 calc(25% - 10px);
-    /* 4 cards in a row */
   }
 }
 
 @media screen and (max-width: 900px) {
   .image-card {
     flex: 1 0 calc(33.333% - 10px);
-    /* 3 cards in a row */
   }
 }
 
 @media screen and (max-width: 600px) {
   .image-card {
     flex: 1 0 calc(50% - 10px);
-    /* 2 cards in a row */
   }
 }
 
-/* Loading spinner animation */
 .loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  /* Updated margin to move the loading spinner down */
 }
 
 .kinetic {
   border: 12px solid rgba(0, 0, 0, 0.3);
-  /* Increased border thickness */
   border-top: 12px solid #3498db;
-  /* Updated color */
   border-radius: 50%;
-  width: 100px;
-  /* Increased spinner size */
   height: 100px;
-  /* Increased spinner size */
   animation: spin 1s linear infinite;
   margin-bottom: 10px;
 }
@@ -135,7 +126,6 @@ progress {
   }
 }
 
-/* Modal styles */
 .modal {
   display: flex;
   position: fixed;
@@ -173,4 +163,11 @@ progress {
   font-weight: bold;
   color: #fff;
   cursor: pointer;
+}
+
+.happyframes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
