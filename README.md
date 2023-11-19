@@ -33,9 +33,8 @@ Uploading event videos has never been easier. Jolly Audience provides a user-fri
 
 ## How it Works ?
 1. **Happy Face Detection:** Utilizes Haar Cascade classifiers for face and smile detection to identify happy faces in each frame of a given video.
-2. **Similarity Check:** Performs a similarity check between frames to avoid redundancy and ensure a diverse collection of happy moments.
-3. **Multiple Happy Faces:** Extracts frames with a minimum number of happy faces, enhancing the inclusivity of the generated photos.
-4. **Easy-to-Use Web Interface:** The web interface allows you to upload event videos effortlessly and receive a collection of curated happy frames.
+2. **Multiple Happy Faces:** Extracts frames with a minimum number of happy faces, enhancing the inclusivity of the generated photos.
+3. **Easy-to-Use Web Interface:** The web interface allows you to upload event videos effortlessly and receive a collection of curated happy frames.
 
 ## Libraries used
 - **Flask:** Backend web framework for Python - Version 3.0.0
@@ -72,10 +71,7 @@ Before running the application, ensure you have the following installed:
 2. Open a new terminal window, navigate to the frontend directory, and run the React frontend:
    ```bash
    cd frontend
-   npm install
-   npm start
+   pnpm install
+   pnpm run dev
    ```
-   This will start the React development server at http://localhost:3000.
-3. Open your web browser and go to http://localhost:3000 to access the application.
-
 --- 
