@@ -26,7 +26,7 @@ Uploading event videos has never been easier. Jolly Audience provides a user-fri
 4. Rajath Thomas Kurian [https://github.com/rajath-tk]
 
 ## Link to product walkthrough
-[Link to video](Link Here)
+https://drive.google.com/file/d/1azxYALrSyxMjSUFqh4edVg25WxYShu-w/view?usp=sharing
 
 ## How it Works ?
 1. **Happy Face Detection:** Utilizes Haar Cascade classifiers for face and smile detection to identify happy faces in each frame of a given video.
