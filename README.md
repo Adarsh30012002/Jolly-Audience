@@ -71,4 +71,3 @@ Before running the application, ensure you have the following installed:
    pnpm install
    pnpm run dev
    ```
---- 
