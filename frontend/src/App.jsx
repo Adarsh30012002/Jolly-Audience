@@ -63,7 +63,7 @@ function App() {
   const handleImageDownload = () => {
     if (selectedImages.length > 0) {
       const zip = new JSZip();
-      const folder = zip.folder("happy_images"); // Create a folder for all images
+      const folder = zip.folder("happy_images");
 
       selectedImages.forEach((index, i) => {
         const image = happyFrames[index];

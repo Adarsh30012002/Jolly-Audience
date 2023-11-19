@@ -112,6 +112,7 @@ progress {
   border-top: 12px solid #3498db;
   border-radius: 50%;
   height: 100px;
+  width: 100px;
   animation: spin 1s linear infinite;
   margin-bottom: 10px;
 }
