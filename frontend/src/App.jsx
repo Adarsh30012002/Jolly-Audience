@@ -1,7 +1,6 @@
 import { useState } from "react";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-
 import "./App.css";
 
 function App() {
@@ -89,11 +88,23 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1> Jolly Audience</h1>
+        <img src="/logo.jpg" alt="Jolly Audience" className="logo" />
+        <h1>Jolly Audience</h1>
       </header>
+      <section className="header-section">
+        <h2 className="main-heading">Post-Event Photo Generator</h2>
+        <p className="sub-heading">Extract happy moments from event videos</p>
+      </section>
+
       <section className="file-section">
-        <input type="file" accept="video/*" onChange={handleFileChange} />
-        <button onClick={handleUpload}>Extract happy frames</button>
+        <input type="file" accept="video/*" onChange={handleFileChange} id="fileInput"/>
+        <label htmlFor="fileInput" className="upload-button">
+          <span className="plus-symbol">+</span> Choose file
+        </label>
+        {videoFile && (
+          <button onClick={handleUpload} className="upload-btn">Upload</button>
+        )}
+        {videoFile && <p className="file-name">{videoFile.name}</p>}
       </section>
 
       {loading && (
@@ -130,7 +141,7 @@ function App() {
             ))}
           </div>
           <div>
-            <button onClick={handleImageDownload}>Download Images</button>
+            <button onClick={handleImageDownload} className="download-btn">Download Images</button>
           </div>
         </div>
       )}
@@ -144,10 +155,42 @@ function App() {
             <img
               src={`data:image/jpeg;base64,${selectedImage}`}
               alt="Selected Image"
+              className="selected-image"
             />
           </div>
         </div>
       )}
+
+      <section className="features">
+        <div className="feature-box">
+          <h3>Happy Face Detection</h3>
+          <p>
+            Utilizes Haar Cascade classifiers for face and smile detection to
+            identify happy faces in each frame of a given video.
+          </p>
+        </div>
+        <div className="feature-box">
+          <h3>Similarity Check</h3>
+          <p>
+            Performs a similarity check between frames to avoid redundancy and
+            ensure a diverse collection of happy moments.
+          </p>
+        </div>
+        <div className="feature-box">
+          <h3>Multiple Happy Faces</h3>
+          <p>
+            Extracts frames with a minimum number of happy faces, enhancing the
+            inclusivity of the generated photos.
+          </p>
+        </div>
+        <div className="feature-box">
+          <h3>Easy-to-Use Web Interface</h3>
+          <p>
+            The web interface allows you to upload event videos effortlessly and
+            receive a collection of curated happy frames.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
