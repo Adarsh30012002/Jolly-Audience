@@ -22,8 +22,6 @@ Uploading event videos has never been easier. Jolly Audience provides a user-fri
 ## Team members
 1. Aaron Jacob [https://github.com/aaron-jacob]
 2. Abhishek S [https://github.com/abhi-s-03]
-3. Mathew V Kariath [https://github.com/MVK2803]
-4. Rajath Thomas Kurian [https://github.com/rajath-tk]
 
 ## Link to product walkthrough
 https://drive.google.com/file/d/1azxYALrSyxMjSUFqh4edVg25WxYShu-w/view?usp=sharing
