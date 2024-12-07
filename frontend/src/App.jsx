@@ -169,13 +169,13 @@ function App() {
             identify happy faces in each frame of a given video.
           </p>
         </div>
-        <div className="feature-box">
+        {/* <div className="feature-box">
           <h3>Similarity Check</h3>
           <p>
             Performs a similarity check between frames to avoid redundancy and
             ensure a diverse collection of happy moments.
           </p>
-        </div>
+        </div> */}
         <div className="feature-box">
           <h3>Multiple Happy Faces</h3>
           <p>
