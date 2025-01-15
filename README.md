@@ -19,10 +19,6 @@ We believe in inclusivity. Jolly Audience extracts frames featuring a minimum nu
 ### 3. Effortless Web Interface
 Uploading event videos has never been easier. Jolly Audience provides a user-friendly web interface, allowing you to effortlessly upload videos and receive a meticulously curated collection of happy frames.
 
-## Team members
-1. Aaron Jacob [https://github.com/aaron-jacob]
-2. Abhishek S [https://github.com/abhi-s-03]
-
 ## Link to product walkthrough
 https://drive.google.com/file/d/1azxYALrSyxMjSUFqh4edVg25WxYShu-w/view?usp=sharing
 
